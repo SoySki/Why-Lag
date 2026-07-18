@@ -1,5 +1,9 @@
-import ram
+import psutil
 
-print(ram.ram_total())
-print(ram.ram_free())
-print(ram.ram_used())
+def cpu_percent():
+    return psutil.cpu_percent(interval=1)
+    print(cpu_percent(),"% Being used")
+
+def cpu_stats():
+    return psutil.cpu_stats
+    print(cpu_stats())
